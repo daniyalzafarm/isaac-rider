@@ -12,11 +12,8 @@ import AppText from "../components/AppText";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 function VerificationCodeScreen(props) {
-  const [verificatinCode, setVerificatinCode] = useState();
-  //   const [password, setPassword] = useState();
-  //   const [isPasswordSecure, setIsPasswordSecure] = useState(true);
+  const [verificationCode, setVerificationCode] = useState();
   return (
     <ScrollView>
       <Screen>
@@ -59,8 +56,8 @@ function VerificationCodeScreen(props) {
                 autoCapitalize="none"
                 autoCorrect={false}
                 placeholder="Waiting for SMS to arrive"
-                value={verificatinCode}
-                onChangeText={(text) => setVerificatinCode(text)}
+                value={verificationCode}
+                onChangeText={(text) => setVerificationCode(text)}
               />
             </View>
             <TouchableOpacity style={{ alignSelf: "flex-start" }}>
