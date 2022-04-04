@@ -96,7 +96,7 @@ function ResetPassword(props) {
             style={{
               marginVertical: 40,
             }}
-            //   onPress={handleLogin}
+            //   onPress={handleReset}
           />
         </View>
       </Screen>
