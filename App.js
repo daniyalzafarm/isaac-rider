@@ -1,9 +1,9 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import AppButton from "./app/components/AppButton";
-import AppText from "./app/components/AppText";
-import Screen from "./app/components/Screen";
+import { StyleSheet } from "react-native";
+import EmailRecoveryScreen from "./app/screens/EmailRecoveryScreen";
 import LoginScreen from "./app/screens/LoginScreen";
+import ReferralCode from "./app/screens/ReferralCode";
+import ResetPassword from "./app/screens/ResetPassword";
+import VerificationCodeScreen from "./app/screens/VerificationCodeScreen";
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
     //     <AppButton title="Test" />
     //   </View>
     // </Screen>
-    <LoginScreen />
+    <EmailRecoveryScreen />
   );
 }
 
