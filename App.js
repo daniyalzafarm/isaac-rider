@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import EmailRecoveryScreen from "./app/screens/EmailRecoveryScreen";
 import LoginScreen from "./app/screens/LoginScreen";
+import ProfileScreen from "./app/screens/ProfileScreen";
 import ReferralCode from "./app/screens/ReferralCode";
 import ResetPassword from "./app/screens/ResetPassword";
 import VerificationCodeScreen from "./app/screens/VerificationCodeScreen";
@@ -13,7 +14,7 @@ export default function App() {
     //     <AppButton title="Test" />
     //   </View>
     // </Screen>
-    <EmailRecoveryScreen />
+    <ProfileScreen />
   );
 }
 
