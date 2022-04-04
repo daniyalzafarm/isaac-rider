@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import EmailRecoveryScreen from "./app/screens/EmailRecoveryScreen";
+import ForgotPasswordCodeScreen from "./app/screens/ForgotPasswordCodeScreen";
 import ForgotPasswordScreen from "./app/screens/ForgotPasswordScreen";
 import LoginScreen from "./app/screens/LoginScreen";
 import ProfileScreen from "./app/screens/ProfileScreen";
@@ -8,15 +9,7 @@ import ResetPassword from "./app/screens/ResetPassword";
 import VerificationCodeScreen from "./app/screens/VerificationCodeScreen";
 
 export default function App() {
-  return (
-    // <Screen style={styles.container}>
-    //   <View style={{ alignItems: "center" }}>
-    //     <AppText>Open up App.js to start working on your app!</AppText>
-    //     <AppButton title="Test" />
-    //   </View>
-    // </Screen>
-    <ForgotPasswordScreen />
-  );
+  return <ProfileScreen />;
 }
 
 const styles = StyleSheet.create({
