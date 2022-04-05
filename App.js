@@ -9,7 +9,7 @@ import ResetPassword from "./app/screens/ResetPassword";
 import VerificationCodeScreen from "./app/screens/VerificationCodeScreen";
 
 export default function App() {
-  return <ProfileScreen />;
+  return <ForgotPasswordCodeScreen />;
 }
 
 const styles = StyleSheet.create({
