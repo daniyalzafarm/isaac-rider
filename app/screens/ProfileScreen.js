@@ -12,7 +12,7 @@ import AppText from "../components/AppText";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-function ProfileScreen(props) {
+function ProfileScreen({ navigation }) {
   const [pic, setPic] = useState(true);
   return (
     <ScrollView>
@@ -118,7 +118,7 @@ function ProfileScreen(props) {
             style={{
               marginVertical: 40,
             }}
-            //   onPress={handleProfile}
+            onPress={() => navigation.navigate("homeNavigator")}
           />
         </View>
       </Screen>

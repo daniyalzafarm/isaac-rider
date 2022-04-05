@@ -10,7 +10,10 @@ import AppText from "../components/AppText";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-function ForgotPassword(props) {
+// import { createNavigation } from "@react-navigation/native";
+
+// const navigation = createNavigation();
+function ForgotPassword({ navigation }) {
   return (
     <ScrollView>
       <Screen>
@@ -22,7 +25,7 @@ function ForgotPassword(props) {
               marginBottom: 100,
             }}
           >
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.pop()}>
               <MaterialCommunityIcons
                 style={{ marginBottom: 50, padding: 0, marginLeft: 0 }}
                 name="chevron-left"
@@ -58,7 +61,10 @@ function ForgotPassword(props) {
               width: "90%",
             }}
           >
-            <TouchableOpacity style={styles.option}>
+            <TouchableOpacity
+              style={styles.option}
+              onPress={() => navigation.navigate("forgotPasswordSms")}
+            >
               <MaterialCommunityIcons
                 name="cellphone"
                 size={50}
@@ -69,7 +75,10 @@ function ForgotPassword(props) {
                 <AppText>--- --- 976</AppText>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.option}>
+            <TouchableOpacity
+              style={styles.option}
+              onPress={() => navigation.navigate("forgotPasswordEmail")}
+            >
               <MaterialCommunityIcons
                 name="email"
                 size={50}

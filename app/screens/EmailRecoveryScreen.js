@@ -12,7 +12,7 @@ import AppText from "../components/AppText";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-function EmailRecoveryScreen(props) {
+function EmailRecoveryScreen({ navigation }) {
   const [email, setEmail] = useState();
   return (
     <ScrollView>
@@ -25,7 +25,7 @@ function EmailRecoveryScreen(props) {
               marginBottom: 100,
             }}
           >
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.pop()}>
               <MaterialCommunityIcons
                 style={{ marginBottom: 50, padding: 0, marginLeft: 0 }}
                 name="chevron-left"
@@ -67,7 +67,7 @@ function EmailRecoveryScreen(props) {
             style={{
               marginVertical: 40,
             }}
-            //   onPress={handleEmail}
+            onPress={() => navigation.navigate("resetPassword")}
           />
         </View>
       </Screen>

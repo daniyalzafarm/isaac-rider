@@ -11,7 +11,7 @@ import Screen from "../components/Screen";
 import TopTab from "../components/TopTab";
 import colors from "../config/colors";
 
-function HomeScreen(props) {
+function HomeScreen({ navigation }) {
   const [isOnline, setIsOnline] = useState(false);
   const [balance, setBalance] = useState(1025);
 
@@ -27,7 +27,10 @@ function HomeScreen(props) {
             marginBottom: 5,
           }}
         >
-          <TouchableOpacity style={styles.imageContainer}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("profile")}
+            style={styles.imageContainer}
+          >
             <Image
               style={styles.imageStyle}
               source={require("../assets/daniyal.png")}

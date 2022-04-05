@@ -12,7 +12,7 @@ import AppText from "../components/AppText";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-function PasswordResetSuccessScreen(props) {
+function PasswordResetSuccessScreen({ navigation }) {
   return (
     <ScrollView>
       <Screen>
@@ -53,6 +53,12 @@ function PasswordResetSuccessScreen(props) {
           </View>
         </View>
         <TouchableOpacity
+          onPress={() =>
+            navigation.reset({
+              index: 0,
+              routes: [{ name: "login" }],
+            })
+          }
           style={{
             position: "absolute",
             bottom: 0,

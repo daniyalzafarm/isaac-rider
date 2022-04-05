@@ -13,7 +13,7 @@ import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-function LoginScreen(props) {
+function LoginScreen({ navigation }) {
   const [userId, setUserId] = useState();
   const [password, setPassword] = useState();
   const [isPasswordSecure, setIsPasswordSecure] = useState(true);
@@ -83,10 +83,10 @@ function LoginScreen(props) {
             style={{
               marginVertical: 40,
             }}
-            //   onPress={handleLogin}
+            onPress={() => navigation.replace("profile")}
           />
           <TouchableOpacity
-          //   onPress={() => {handleForgot}}
+            onPress={() => navigation.navigate("forgotPassword")}
           >
             <AppText>Forgot Password?</AppText>
           </TouchableOpacity>

@@ -1,22 +1,10 @@
-import { StyleSheet } from "react-native";
-import EmailRecoveryScreen from "./app/screens/EmailRecoveryScreen";
-import ForgotPasswordCodeScreen from "./app/screens/ForgotPasswordCodeScreen";
-import ForgotPasswordScreen from "./app/screens/ForgotPasswordScreen";
-import HomeScreen from "./app/screens/HomeScreen";
-import LoginScreen from "./app/screens/LoginScreen";
-import PasswordResetSuccessScreen from "./app/screens/PasswordResetSuccessScreen";
-import ProfileScreen from "./app/screens/ProfileScreen";
-import ReferralCode from "./app/screens/ReferralCode";
-import ResetPassword from "./app/screens/ResetPassword";
-import VerificationCodeScreen from "./app/screens/VerificationCodeScreen";
-
+import { NavigationContainer } from "@react-navigation/native";
+import AppNavigator from "./app/navigation/AppNavigator";
+import NavigationTheme from "./app/navigation/NavigationTheme";
 export default function App() {
-  return <HomeScreen />;
+  return (
+    <NavigationContainer theme={NavigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#C8C8C8",
-    justifyContent: "center",
-  },
-});

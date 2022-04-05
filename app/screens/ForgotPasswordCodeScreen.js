@@ -5,14 +5,14 @@ import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import OTPInputView from "@twotalltotems/react-native-otp-input";
-function ForgotPasswordCodeScreen(props) {
+function ForgotPasswordCodeScreen({ navigation }) {
   const [isVerified, setIsVerified] = useState(false);
 
   return (
     <ScrollView>
       <Screen>
         <View style={styles.container}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.pop()}>
             <MaterialCommunityIcons
               style={{ marginBottom: 50, padding: 0, marginLeft: 0 }}
               name="chevron-left"
@@ -54,6 +54,7 @@ function ForgotPasswordCodeScreen(props) {
               onCodeFilled={(code) => {
                 setIsVerified(true);
                 console.log(`Code is ${code}, you are good to go!`);
+                navigation.replace("resetPassword");
               }}
             />
           </View>

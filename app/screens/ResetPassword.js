@@ -13,7 +13,7 @@ import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-function ResetPassword(props) {
+function ResetPassword({ navigation }) {
   const [password, setPassword] = useState();
   const [isPasswordSecure, setIsPasswordSecure] = useState(true);
   const [confirmPassword, setConfirmPassword] = useState();
@@ -96,7 +96,7 @@ function ResetPassword(props) {
             style={{
               marginVertical: 40,
             }}
-            //   onPress={handleReset}
+            onPress={() => navigation.navigate("resetSuccess")}
           />
         </View>
       </Screen>
