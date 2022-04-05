@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 import EmailRecoveryScreen from "./app/screens/EmailRecoveryScreen";
 import ForgotPasswordCodeScreen from "./app/screens/ForgotPasswordCodeScreen";
 import ForgotPasswordScreen from "./app/screens/ForgotPasswordScreen";
+import HomeScreen from "./app/screens/HomeScreen";
 import LoginScreen from "./app/screens/LoginScreen";
 import PasswordResetSuccessScreen from "./app/screens/PasswordResetSuccessScreen";
 import ProfileScreen from "./app/screens/ProfileScreen";
@@ -10,7 +11,7 @@ import ResetPassword from "./app/screens/ResetPassword";
 import VerificationCodeScreen from "./app/screens/VerificationCodeScreen";
 
 export default function App() {
-  return <PasswordResetSuccessScreen />;
+  return <HomeScreen />;
 }
 
 const styles = StyleSheet.create({
